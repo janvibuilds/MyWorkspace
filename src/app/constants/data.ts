@@ -56,11 +56,11 @@ export { PROJECTS } from "./projects";
 // available icons (e.g. "docker", "aws", "go", "rust", "kubernetes", ...).
 export const SKILLS = [
   // Languages
-  "ts",
-  "js",
+  "typescript",
+  "javascript",
   "rust",
   "java",
-  "py",
+  "python",
   // Frontend
   "react",
   "nextjs",
@@ -70,23 +70,23 @@ export const SKILLS = [
   "express",
   "graphql",
   "prisma",
+  "nestjs",
+  
   // Databases
   "postgresql",
   "mongodb",
   "redis",
   "supabase",
+
   // DevOps & Cloud
   "aws",
   "docker",
   "githubactions",
-  "git",
-  "github",
+  "linux",
   // Tools
   "vscode",
   "postman",
-  "npm",
-  "figma",
-  "md",
+  "figma", 
 ];
 
 export const EXPERIENCE = [
