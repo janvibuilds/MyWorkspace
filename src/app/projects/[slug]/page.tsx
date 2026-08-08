@@ -77,6 +77,7 @@ interface ProjectMetrics {
 interface Project {
   name: string;
   tagline: string;
+  overview: string;
   description: string;
   tech: string[];
   link?: string;
@@ -191,6 +192,16 @@ const ProjectContent = ({ project }: { project: Project }) => (
     <section className="divide-y divide-dashed divide-border">
       <div className="py-2 px-4">
         <h2 className="text-2xl font-semibold">overview.</h2>
+      </div>
+      <p className="p-4 text-muted-foreground text-justify leading-relaxed">
+        {project.overview}
+      </p>
+    </section>
+
+    {/* Description */}
+    <section className="divide-y divide-dashed divide-border">
+      <div className="py-2 px-4">
+        <h2 className="text-2xl font-semibold">about.</h2>
       </div>
       <p className="p-4 text-muted-foreground text-justify leading-relaxed">
         {project.description}
