@@ -70,18 +70,29 @@ export default function AboutMe() {
 
       <div className="p-4">
         <div className="flex gap-3 flex-wrap">
-          {SOCIAL_BUTTONS.map((btn) => (
-            <Link
-              key={btn.label}
-              href={btn.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`px-3 py-2 btn text-sm ${btn.className || ""}`}
-              aria-label={btn.label}
-            >
-              {btn.icon}
-            </Link>
-          ))}
+          {SOCIAL_BUTTONS.map((btn) =>
+            btn.href.startsWith("mailto:") ? (
+              <a
+                key={btn.label}
+                href={btn.href}
+                className={`px-3 py-2 btn text-sm ${btn.className || ""}`}
+                aria-label={btn.label}
+              >
+                {btn.icon}
+              </a>
+            ) : (
+              <Link
+                key={btn.label}
+                href={btn.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`px-3 py-2 btn text-sm ${btn.className || ""}`}
+                aria-label={btn.label}
+              >
+                {btn.icon}
+              </Link>
+            )
+          )}
         </div>
       </div>
     </section>

@@ -39,8 +39,8 @@ export const SOCIAL_LINKS = {
   devto: `https://dev.to/${USER_NAMES.devtoUsername}`,
   twitter: `https://x.com/${USER_NAMES.twitterUsername}`,
   instagram: `https://instagram.com/${USER_NAMES.instagramUsername}`,
-  resume: "/JANVI.pdf",
-  email: `mailto:${ABOUT_ME.email}?subject=Message%20from%20Website&body=Hi!%20I%27m...`,
+  resume: "/resume",
+  email: `https://mail.google.com/mail/?view=cm&fs=1&to=${ABOUT_ME.email}&su=Message%20from%20Website&body=Hi!%20I%27m...`,
 };
 
 // Contact form submission endpoint (used by the "send a message" form).
@@ -126,9 +126,21 @@ export const EDUCATION = [
 
 export const TESTIMONIALS = [
   {
-    name: "Coming Soon",
-    role: "Colleague",
+    name: "Founder",
+    role: "Asterics Compute",
     content:
-      "Testimonials from collaborators and colleagues will appear here.",
+      "Janvi has a great ability to take an idea that's still rough and turn it into something structured, functional, and polished. She thinks beyond just writing code — she understands the product, the user, and how everything needs to come together.",
+  },
+  {
+    name: "Program Mentor",
+    role: "Stellar Organization",
+    content:
+      "What stood out to me about Janvi was how quickly she turned curiosity into execution. She's comfortable learning new technologies and putting them to work, especially across Stellar, Midnight, and privacy-focused applications.",
+  },
+  {
+    name: "Product Lead",
+    role: "Sen4a Recruiters",
+    content:
+      "Janvi brings a genuine builder's mindset to her work. She takes ownership, experiments fearlessly, and cares about the experience as much as the technology behind it. That combination is what makes her stand out.",
   },
 ];
