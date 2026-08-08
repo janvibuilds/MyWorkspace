@@ -10,10 +10,10 @@ import {
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaRegCommentDots } from "react-icons/fa";
-import { SiPeerlist } from "react-icons/si";
+import { FaDev } from "react-icons/fa6";
 import { useState, ChangeEvent, FormEvent, ComponentType } from "react";
 import Meeting from "../ui/cal-meeting";
-import { SOCIAL_LINKS, CONTACT_FORM_ENDPOINT } from "@/app/constants/data";
+import { SOCIAL_LINKS, CONTACT_FORM_ENDPOINT, WEB3FORMS_ACCESS_KEY } from "@/app/constants/data";
 
 // =============================================
 // TYPE DEFINITIONS
@@ -85,7 +85,10 @@ const submitForm = async (
     const response = await fetch(FORM_CONFIG.endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        ...formData,
+      }),
     });
 
     if (response.ok) {
@@ -233,13 +236,13 @@ const Contact = () => {
             <div className="p-4 border-b border-dashed border-border w-full">
               <h3 className="text-xl font-medium mb-1">schedule a meeting.</h3>
               <p className="text-sm text-muted-foreground">
-                Book a 30-minute call on Google Meet.
+                Book a 15-minute call on Google Meet.
               </p>
             </div>
 
             <div className="p-4 border-b border-dashed border-border w-full">
               <h4 className="text-lg font-medium mb-1">
-                30-minute discovery call.
+                15-minute discovery call.
               </h4>
               <p className="text-sm text-muted-foreground">
                 Let&apos;s discuss your project goals.
@@ -294,15 +297,15 @@ const Contact = () => {
                   <FaXTwitter className="w-5 h-5" />
                 </a>
 
-                {/* Peerlist */}
+                {/* Dev.to */}
                 <a
-                  href={SOCIAL_LINKS.peerlist}
+                  href={SOCIAL_LINKS.devto}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 btn flex items-center justify-center"
-                  title="Peerlist"
+                  title="Dev.to"
                 >
-                  <SiPeerlist className="w-5 h-5" />
+                  <FaDev className="w-5 h-5" />
                 </a>
               </div>
             </div>

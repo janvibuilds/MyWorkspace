@@ -3,6 +3,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import GridPattern from "@/components/ui/grid-pattern";
@@ -127,7 +128,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://app.cal.com" />
 
         {/* JSON-LD structured data for SEO */}
-        <script
+        <Script
+          id="json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
@@ -159,7 +161,7 @@ export default function RootLayout({
                   SOCIAL_LINKS.linkedin,
                   SOCIAL_LINKS.twitter,
                   SOCIAL_LINKS.instagram,
-                  SOCIAL_LINKS.peerlist,
+                  SOCIAL_LINKS.devto,
                 ],
               },
               {

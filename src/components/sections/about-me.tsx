@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { SOCIAL_LINKS, ABOUT_ME } from "@/app/constants/data";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
-import { FaXTwitter, FaInstagram } from "react-icons/fa6";
-import { SiPeerlist } from "react-icons/si";
+import { FaXTwitter, FaInstagram, FaDev } from "react-icons/fa6";
 
 // =============================================
 // SOCIAL BUTTONS DATA
@@ -29,9 +28,9 @@ const SOCIAL_BUTTONS = [
     icon: <FaInstagram className="w-5 h-5" />,
   },
   {
-    href: SOCIAL_LINKS.peerlist,
-    label: "Peerlist",
-    icon: <SiPeerlist className="w-5 h-5" />,
+    href: SOCIAL_LINKS.devto,
+    label: "Dev.to",
+    icon: <FaDev className="w-5 h-5" />,
   },
   {
     href: SOCIAL_LINKS.resume,

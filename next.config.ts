@@ -12,6 +12,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "hits.sh",
       },
+      {
+        protocol: "https",
+        hostname: "www.risein.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.sen4a-recruiters.com",
+      },
     ],
     dangerouslyAllowSVG: true,
   },

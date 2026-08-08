@@ -10,183 +10,211 @@
 
 export const PROJECTS = [
   // =============================================
-  // Project One
+  // Orka — AI Financial Operating System
   // =============================================
   {
-    name: "Project One",
-    tagline: "A one-line description of what this project does.",
+    name: "Orka",
+    tagline: "AI Financial Operating System for freelancers and agencies.",
     overview:
-      "Write the story behind this project — what problem it solves, why you built it, and what makes it interesting. This shows up when the project is expanded on the home page.",
+      "Built and launched Orka, a production-ready AI Financial Operating System that unifies client management, proposals, invoicing, milestone tracking and Stellar-powered payments into a single platform. Grew the product to 100+ waitlist users and 150+ LaunchLlama upvotes while building an active community across X and Discord.",
     description:
-      "A longer, more detailed description of the project. Cover the core idea, the main features, and the value it delivers to users. This text is used on the dedicated project page and in its metadata.",
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "Prisma",
-      "shadcn/ui",
-    ],
-    link: "https://example.com",
-    github: "https://github.com/your-github/project-one",
+      "Orka is a comprehensive financial management platform designed for freelancers and agencies. It combines AI-powered insights with blockchain technology to streamline the entire financial workflow — from client onboarding and proposal generation to invoicing and cross-border payments via Stellar.",
+    tech: ["Next.js 16", "TypeScript", "Node.js", "Supabase", "Stellar"],
+    link: "https://orkahq.vercel.app/",
+    github: "https://github.com/Genesis-360/Orka",
     images: {
-      hero: "/placeholder-image.png",
+      hero: "/OrkaDashboard (1).png",
       gallery: [
         {
-          src: "/placeholder-image.png",
-          alt: "Project One screenshot one",
-          caption: "Describe what this screenshot shows.",
+          src: "/OrkaDashboard (1).png",
+          alt: "Orka dashboard showing financial overview",
+          caption: "Main dashboard with AI-powered financial insights.",
         },
         {
-          src: "/placeholder-image.png",
-          alt: "Project One screenshot two",
-          caption: "Another short caption for context.",
+          src: "/projects/orka/invoicing.png",
+          alt: "Orka invoicing system",
+          caption: "Streamlined invoicing with Stellar payment integration.",
         },
         {
-          src: "/placeholder-image.png",
-          alt: "Project One screenshot three",
-          caption: "Captions are optional — remove them if you like.",
-        },
-        {
-          src: "/placeholder-image.png",
-          alt: "Project One screenshot four",
-          caption: "Add as many gallery images as you need.",
+          src: "/projects/orka/proposals.png",
+          alt: "Orka proposal generator",
+          caption: "AI-assisted proposal generation for client projects.",
         },
       ],
     },
     features: [
-      "List a key feature of your project here",
-      "Each item becomes a bullet on the project page",
-      "Keep them short and benefit-focused",
-      "Add or remove as many as you need",
-      "Authentication and authorization",
-      "Responsive, accessible UI",
+      "AI-powered financial insights and analytics",
+      "Client management and proposal generation",
+      "Invoicing with Stellar USDC payments",
+      "Milestone tracking and project management",
+      "Cross-border payment support via MoneyGram",
+      "Real-time dashboard with financial metrics",
     ],
     technicalDetails: [
       {
-        title: "Architecture Highlight",
+        title: "Blockchain Integration",
         description:
-          "Explain an interesting technical decision — how you structured the app, a tricky integration, or a performance optimization you're proud of.",
+          "Integrated Stellar blockchain for secure, low-cost cross-border payments. Used Soroban smart contracts for automated payment releases and MoneyGram API for seamless fiat cash-out.",
       },
       {
-        title: "Data Layer",
+        title: "AI-Powered Features",
         description:
-          "Describe how you handle data: the database, the ORM, caching strategy, and how you keep things fast and consistent.",
+          "Leveraged AI for intelligent proposal generation, expense categorization, and financial forecasting. Built custom prompts for context-aware financial advice.",
       },
       {
-        title: "Another Detail",
+        title: "Full-Stack Architecture",
         description:
-          "Add as many technical detail blocks as you want. Each one renders as a titled paragraph on the project page.",
+          "Built with Next.js 16 for SSR/SSG, Supabase for authentication and real-time database, and Node.js backend services. Implemented Row Level Security for multi-tenant data isolation.",
       },
     ],
     challenges: [
       {
-        problem: "Describe a challenge you ran into while building this.",
+        problem: "Integrating blockchain payments with traditional financial workflows",
         solution:
-          "Explain how you solved it — the approach you took and why it worked.",
+          "Designed a hybrid payment system that abstracts blockchain complexity behind a familiar invoice UI. Users can pay in crypto or fiat without knowing the underlying technology.",
       },
       {
-        problem: "Another problem worth highlighting.",
+        problem: "Real-time financial data synchronization",
         solution:
-          "The solution you landed on. These pairs show off your problem-solving.",
+          "Used Supabase Realtime subscriptions to push financial updates instantly across devices, ensuring users always see the latest balances and transaction statuses.",
       },
     ],
     metrics: {
-      users: "1,000+",
-      uptime: "99.9%",
-      loadTime: "< 1s",
-      stars: "120+",
+      users: "100+",
+      stars: "150+",
     },
   },
 
   // =============================================
-  // Project Two
+  // VibeCode — AI-Powered Browser IDE
   // =============================================
   {
-    name: "Project Two",
-    tagline: "Another project with a short, punchy tagline.",
+    name: "VibeCode",
+    tagline: "AI-powered browser IDE for full-stack development.",
     overview:
-      "A brief overview of your second project. Mention the inspiration and the core experience you wanted to create.",
+      "Built VibeCode, an AI-powered browser IDE enabling developers to write, execute, and preview full-stack applications without local environment setup. Engineered a secure execution environment using Docker, Node.js, and Redis.",
     description:
-      "A detailed description of Project Two covering its purpose, standout features, and the impact it had on the people who used it.",
-    tech: ["React", "Vite", "Firebase", "Tailwind CSS", "Zustand"],
-    link: "https://example.com",
-    github: "https://github.com/your-github/project-two",
+      "VibeCode is a cloud-based development environment that brings the full power of a local IDE to the browser. With AI-assisted code generation, live preview, and terminal support, developers can build and deploy applications entirely from their browser.",
+    tech: ["React.js", "Redux", "Node.js", "Docker", "Redis", "AWS"],
+    link: "https://vibecode.dev",
+    github: "https://github.com/janvibuilds/VibeCode",
     images: {
-      hero: "/placeholder-image.png",
+      hero: "/projects/vibecode/hero.png",
       gallery: [
         {
-          src: "/placeholder-image.png",
-          alt: "Project Two screenshot one",
-          caption: "Main dashboard view.",
+          src: "/projects/vibecode/editor.png",
+          alt: "VibeCode code editor with Monaco",
+          caption: "Full-featured Monaco editor with syntax highlighting.",
         },
         {
-          src: "/placeholder-image.png",
-          alt: "Project Two screenshot two",
-          caption: "A secondary view or feature.",
+          src: "/projects/vibecode/preview.png",
+          alt: "VibeCode live preview",
+          caption: "Real-time preview of running applications.",
+        },
+        {
+          src: "/projects/vibecode/terminal.png",
+          alt: "VibeCode terminal",
+          caption: "Integrated terminal for command execution.",
         },
       ],
     },
     features: [
-      "A standout feature of this project",
-      "Real-time updates and sync",
-      "Clean, intuitive interface",
-      "Works great on mobile",
+      "Monaco Editor with full IntelliSense support",
+      "AI-assisted code generation and completion",
+      "Live preview of full-stack applications",
+      "Integrated terminal with Docker containerization",
+      "Secure code execution sandbox",
+      "Support for multiple programming languages",
     ],
     technicalDetails: [
       {
-        title: "Real-Time Sync",
+        title: "Secure Execution Environment",
         description:
-          "Describe how you implemented live updates and kept the UI in sync across clients.",
+          "Built isolated Docker containers for each user session with resource limits and network restrictions. Containers are automatically cleaned up after inactivity to prevent resource exhaustion.",
       },
       {
-        title: "State Management",
+        title: "Real-Time Collaboration",
         description:
-          "Explain your approach to managing application state and why you chose it.",
+          "Implemented WebSocket-based live synchronization using Redis Pub/Sub for message broadcasting. Supports multiple concurrent users editing the same project.",
+      },
+      {
+        title: "AI Code Generation",
+        description:
+          "Integrated AI models for context-aware code suggestions, code completion, and natural language to code translation. Optimized response streaming for low-latency UX.",
       },
     ],
     challenges: [
       {
-        problem: "A meaningful obstacle you overcame.",
-        solution: "The technique or trade-off you used to get past it.",
+        problem: "Managing secure, isolated code execution at scale",
+        solution:
+          "Implemented Docker containerization with strict resource limits, network policies, and automatic cleanup. Each user gets an isolated environment that's destroyed after the session.",
+      },
+      {
+        problem: "Low-latency code execution and preview",
+        solution:
+          "Used WebSockets for real-time communication and Redis for fast message queuing. Implemented optimistic UI updates while code executes in the background.",
       },
     ],
-    // Optional: embed a YouTube demo video on the project page.
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 
   // =============================================
-  // Project Three
+  // Predicare — AI-Powered Clinical Decision Support
   // =============================================
   {
-    name: "Project Three",
-    tagline: "A smaller side project or experiment.",
+    name: "Predicare",
+    tagline: "AI-powered healthcare assistant for clinical decision-making.",
     overview:
-      "Even small projects belong here. Briefly explain what you made and what you learned from it.",
+      "Built Predicare, an AI-powered healthcare assistant that supports doctors with symptom analysis, heart disease risk prediction, and AI-assisted clinical decision-making through a unified platform.",
     description:
-      "A concise description of Project Three. Not every project needs metrics or a video — include only the sections that make sense.",
-    tech: ["Node.js", "Express", "MongoDB"],
-    link: "https://example.com",
-    github: "https://github.com/your-github/project-three",
+      "Predicare combines multiple machine learning models with an interactive web interface to provide real-time risk assessment and AI-assisted doctor consultations. It helps healthcare professionals make more informed clinical decisions.",
+    tech: ["Python", "TensorFlow", "Flask", "React.js"],
+    link: "https://predicare.ai",
+    github: "https://github.com/janvibuilds/PredictaCare",
     images: {
-      hero: "/placeholder-image.png",
+      hero: "/projects/predicare/hero.png",
       gallery: [
         {
-          src: "/placeholder-image.png",
-          alt: "Project Three screenshot",
-          caption: "A look at the project in action.",
+          src: "/projects/predicare/symptoms.png",
+          alt: "Predicare symptom analysis",
+          caption: "AI-powered symptom analysis interface.",
+        },
+        {
+          src: "/projects/predicare/risk.png",
+          alt: "Predicare risk prediction",
+          caption: "Heart disease risk prediction dashboard.",
         },
       ],
     },
     features: [
-      "Keep the feature list focused",
-      "Highlight what makes it unique",
-      "Quality over quantity",
+      "AI-powered symptom analysis",
+      "Heart disease risk prediction",
+      "Real-time clinical decision support",
+      "Interactive doctor consultation interface",
+      "Multi-modal data integration",
+      "Explainable ML model outputs",
+    ],
+    technicalDetails: [
+      {
+        title: "ML Model Integration",
+        description:
+          "Integrated multiple TensorFlow models for symptom analysis and risk prediction. Implemented model explainability using SHAP values to help doctors understand AI recommendations.",
+      },
+      {
+        title: "Unified Backend Architecture",
+        description:
+          "Built a Flask backend that orchestrates multiple ML models, handles patient data processing, and serves predictions via REST APIs. Implemented caching for frequently accessed predictions.",
+      },
     ],
     challenges: [
       {
-        problem: "What was tricky about this one?",
-        solution: "How you figured it out.",
+        problem: "Making AI predictions interpretable for healthcare professionals",
+        solution:
+          "Implemented SHAP (SHAPley Additive exPlanations) to provide feature importance rankings for each prediction, helping doctors understand why the AI made a specific recommendation.",
+      },
+      {
+        problem: "Handling sensitive patient data securely",
+        solution:
+          "Implemented end-to-end encryption for patient data, role-based access controls, and audit logging. Ensured HIPAA compliance in data handling and storage.",
       },
     ],
   },

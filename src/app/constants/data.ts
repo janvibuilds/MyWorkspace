@@ -4,46 +4,49 @@
 // Almost everything on the site is driven from the constants below.
 // Replace the placeholder values with your own details.
 
-const DOMAIN = "yourdomain.com";
+const DOMAIN = "bejanvi.tech";
 export const BASE_URL = `https://${DOMAIN}`;
 
 export const ABOUT_ME = {
-  name: "Your Name",
-  title: "Full Stack Developer",
-  location: "City, India",
-  email: "you@example.com",
-  description: [
-    "Hey, there! I'm a developer who loves building products that people actually use. Write a couple of sentences here about who you are, what you do, and what you're currently working on.",
-    "Use this space to talk about your experience, the kinds of problems you enjoy solving, and the technologies you reach for most often.",
-    "Wrap up with what you're excited about right now — side projects, open source, or whatever you're learning next.",
-  ],
-  profileImage: "/placeholder-avatar.png",
-  profileGif: "/placeholder-avatar.png",
+  name: "Janvi",
+  title: "Full Stack / Blockchain Engineer",
+  location: "Delhi, India",
+  email: "janvisinghal10@gmail.com",
+  
+description: [
+  "I'm Janvi — a full stack engineer and Web3 builder who turns ambitious ideas into things that actually work.",
+  "I enjoy building where software, blockchain, and design meet, especially when there's a problem worth solving.",
+  "Currently building, experimenting, and figuring out what's next — one idea at a time.",
+]
+,
+  profileImage: "/janvi.jpg.jpeg",
+  profileGif: "/janvi.jpg.jpeg",
 };
 
 export const USER_NAMES = {
-  githubUsername: "your-github",
-  linkedinUsername: "your-linkedin",
-  twitterUsername: "your-twitter",
-  peerlistUsername: "your-peerlist",
-  instagramUsername: "your-instagram",
+  githubUsername: "janvibuilds",
+  linkedinUsername: "janvibuilds",
+  twitterUsername: "janvibuilds",
+  devtoUsername: "janvibuilds",
+  instagramUsername: "buildwithjanvi",
   // cal.com username + event slug used by the "schedule a meeting" button
-  calUsername: "your-cal-username",
+  calUsername: "janvibuilds/15min",
 };
 
 export const SOCIAL_LINKS = {
   github: `https://github.com/${USER_NAMES.githubUsername}`,
   linkedin: `https://linkedin.com/in/${USER_NAMES.linkedinUsername}`,
-  peerlist: `https://peerlist.io/${USER_NAMES.peerlistUsername}`,
+  devto: `https://dev.to/${USER_NAMES.devtoUsername}`,
   twitter: `https://x.com/${USER_NAMES.twitterUsername}`,
   instagram: `https://instagram.com/${USER_NAMES.instagramUsername}`,
-  resume: "/resume.pdf",
+  resume: "/JANVI.pdf",
   email: `mailto:${ABOUT_ME.email}?subject=Message%20from%20Website&body=Hi!%20I%27m...`,
 };
 
 // Contact form submission endpoint (used by the "send a message" form).
-// Create a free form at https://formspree.io/forms and paste your URL here.
-export const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
+// Web3Forms - free form submission service
+export const CONTACT_FORM_ENDPOINT = "https://api.web3forms.com/submit";
+export const WEB3FORMS_ACCESS_KEY = "a56a4c50-4084-434d-977a-908dda781b36";
 
 export { PROJECTS } from "./projects";
 
@@ -52,15 +55,15 @@ export { PROJECTS } from "./projects";
 // Each entry is a https://skillicons.dev slug — browse that site for all
 // available icons (e.g. "docker", "aws", "go", "rust", "kubernetes", ...).
 export const SKILLS = [
-  // Frontend
-  "html",
-  "css",
-  "js",
+  // Languages
   "ts",
+  "js",
+  "rust",
+  "java",
+  "py",
+  // Frontend
   "react",
   "nextjs",
-  "vue",
-  "nuxtjs",
   "tailwind",
   // Backend
   "nodejs",
@@ -68,82 +71,64 @@ export const SKILLS = [
   "graphql",
   "prisma",
   // Databases
-  "mongodb",
-  "mysql",
   "postgresql",
-  "firebase",
+  "mongodb",
+  "redis",
   "supabase",
-  // Languages
-  "c",
-  "cpp",
-  "java",
-  "py",
-  // Tools & DevOps
+  // DevOps & Cloud
+  "aws",
+  "docker",
+  "githubactions",
   "git",
   "github",
+  // Tools
   "vscode",
   "postman",
-  "vite",
   "npm",
   "figma",
   "md",
-  // Cloud & Deployment
-  "vercel",
-  "githubactions",
 ];
 
 export const EXPERIENCE = [
   {
-    company: "Company One",
-    companyLink: "https://example.com/",
-    logo: "/placeholder-logo.png",
-    role: "Software Developer",
-    period: "Jan 2024 - Present",
-    location: "City, Country",
+    company: "RiseIn",
+    companyLink: "https://www.risein.com/",
+    logo: "https://www.risein.com/risein-favicon/favicon.svg",
+    role: "Stellar Journey to Mastery & Midnight Program",
+    period: "Feb 2026 - Present",
+    location: "Remote, Global",
     description:
-      "Describe what you did here — the products you shipped, the impact you had, and the technologies you worked with. Keep it to two or three sentences focused on outcomes.",
-    skills: ["Next.js", "React", "Node.js", "TypeScript", "PostgreSQL"],
+      "Built LumenShake, a full-stack cross-border payroll platform using Next.js, Node.js, PostgreSQL, Stellar, Soroban, and MoneyGram APIs, enabling employers to send USDC payroll globally with seamless local fiat cash-out through MoneyGram. Developed end-to-end payment infrastructure by integrating Stellar wallet authentication, Soroban smart contracts, backend APIs, and secure transaction workflows.",
+    skills: ["Next.js", "Node.js", "PostgreSQL", "Stellar", "Soroban", "TypeScript"],
   },
   {
-    company: "Company Two",
-    companyLink: "https://example.com/",
-    logo: "/placeholder-logo.png",
-    role: "Frontend Developer Intern",
-    period: "Jun 2023 - Dec 2023",
-    location: "Remote",
+    company: "Sen4a Recruiters",
+    companyLink: "https://www.sen4a-recruiters.com/",
+    logo: "/Screenshot 2026-08-08 195416.png",
+    role: "Backend Engineer Intern",
+    period: "Mar 2025 - Sep 2025",
+    location: "Remote / Tokyo, Japan",
     description:
-      "Another role summary. Highlight a concrete achievement or two and the stack you used to deliver it.",
-    skills: ["React", "TypeScript", "Tailwind CSS", "REST APIs"],
+      "Engineered scalable backend services for a recruitment platform using TypeScript, NestJS, PostgreSQL, GraphQL, Knex.js, and microservices, optimizing database performance, API efficiency, and caching strategies.",
+    skills: ["TypeScript", "NestJS", "PostgreSQL", "GraphQL", "Knex.js", "Microservices"],
   },
 ];
 
 export const EDUCATION = [
   {
-    degree: "B.Tech in Computer Science Engineering",
-    institution: "Your University",
-    institutionLink: "https://example.com/",
-    period: "2021 - 2025",
-    score: "8.5 CGPA",
+    degree: "B.Tech in Computer Science and Engineering (Data Science)",
+    institution: "Abdul Kalam Technical University",
+    institutionLink: "https://aktu.ac.in/",
+    period: "Nov 2022 - Jun 2026",
+    score: "Ghaziabad, Uttar Pradesh",
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Jane Doe",
-    role: "CTO @ Company",
+    name: "Coming Soon",
+    role: "Colleague",
     content:
-      "Add a short testimonial here. A couple of sentences from someone you've worked with about what it's like to collaborate with you works best.",
-  },
-  {
-    name: "John Smith",
-    role: "Founder @ Startup",
-    content:
-      "Another testimonial. Keep these genuine and specific — mention the work you did together and the value you brought.",
-  },
-  {
-    name: "Alex Johnson",
-    role: "Engineering Manager @ Agency",
-    content:
-      "A third testimonial. You can add or remove entries here; the section adapts to however many you provide.",
+      "Testimonials from collaborators and colleagues will appear here.",
   },
 ];

@@ -28,7 +28,7 @@ export default function Meeting() {
 
   return (
     <button
-      data-cal-link={`${USER_NAMES.calUsername}/30min`}
+      data-cal-link={USER_NAMES.calUsername}
       data-cal-config='{"layout":"month_view"}'
       className="btn w-full px-3 py-2 rounded-lg text-sm font-medium flex items-center justify-center gap-2 cursor-pointer"
     >

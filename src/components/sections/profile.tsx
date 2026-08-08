@@ -62,7 +62,7 @@ const Profile = () => {
                 alt="Profile GIF"
                 width={96}
                 height={96}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-125"
                 unoptimized // Keep GIF animation
               />
             ) : (
@@ -71,7 +71,7 @@ const Profile = () => {
                 alt={ABOUT_ME.name}
                 width={96}
                 height={96}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-125"
                 priority
               />
             )}
