@@ -7,7 +7,7 @@ const STAGGER = 30;
 
 const navItems = [
   { name: "skills", href: "#skills", type: "hash" as const },
-  { name: "projects", href: "#projects", type: "hash" as const },
+  { name: "projects", href: "/projects", type: "route" as const },
   { name: "contact", href: "#contact", type: "hash" as const },
   { name: "gallery", href: "/gallery", type: "route" as const },
 ];

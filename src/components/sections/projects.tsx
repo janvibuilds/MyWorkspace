@@ -9,7 +9,11 @@ import ImageTooltip from "@/components/ui/image-tooltip";
 import ImageMarquee from "@/components/ui/image-marquee";
 import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
-export default function Projects() {
+interface ProjectsProps {
+  title?: string;
+}
+
+export default function Projects({ title = "featured projects." }: ProjectsProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleProjectClick = (e: React.MouseEvent) => {
@@ -22,7 +26,7 @@ export default function Projects() {
     <section id="projects">
       <div className="flex items-center py-2 px-4 border-b border-dashed border-border">
         <h2 className="text-2xl font-semibold flex items-center">
-          featured projects.
+          {title}
         </h2>
       </div>
 
