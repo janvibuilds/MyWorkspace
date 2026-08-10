@@ -20,6 +20,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.sen4a-recruiters.com",
       },
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
     ],
     dangerouslyAllowSVG: true,
   },

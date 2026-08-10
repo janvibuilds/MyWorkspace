@@ -44,7 +44,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "building-1",
     type: "image",
-    src: "/OrkaDashboard.png",
+    src: "https://picsum.photos/seed/orka/800/600",
     title: "Orka dashboard",
     category: "BUILDING",
     year: 2025,
@@ -54,7 +54,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "founder-1",
     type: "image",
-    src: "/placeholder-avatar.png",
+    src: "https://picsum.photos/seed/founder/400/600",
     title: "Founder portrait",
     category: "FOUNDER",
     year: 2026,
@@ -63,7 +63,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "event-1",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/web3conf/400/300",
     title: "Web3 conference",
     category: "EVENTS",
     year: 2025,
@@ -73,7 +73,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "moment-1",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/deploy/400/300",
     title: "First deployment",
     category: "MOMENTS",
     year: 2024,
@@ -82,7 +82,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "building-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/silentpay/800/300",
     title: "Building SilentPay",
     category: "BUILDING",
     year: 2025,
@@ -92,7 +92,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "art-1",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/visual/400/600",
     title: "Visual experiment",
     category: "ART",
     year: 2025,
@@ -101,7 +101,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "achievement-1",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/hackathon/800/600",
     title: "Hackathon winner",
     category: "ACHIEVEMENTS",
     year: 2025,
@@ -110,7 +110,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "personal-1",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/workspace/400/300",
     title: "Workspace view",
     category: "PERSONAL",
     year: 2026,
@@ -120,7 +120,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "event-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/meetup/400/300",
     title: "University meetup",
     category: "EVENTS",
     year: 2025,
@@ -129,7 +129,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "building-3",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/devsetup/600/400",
     title: "Development setup",
     category: "BUILDING",
     year: 2026,
@@ -138,7 +138,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "founder-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/team/400/300",
     title: "Team discussion",
     category: "FOUNDER",
     year: 2025,
@@ -148,7 +148,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "personal-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/coffee/800/300",
     title: "Morning coffee",
     category: "PERSONAL",
     year: 2025,
@@ -157,7 +157,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "art-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/creative/400/600",
     title: "Creative coding output",
     category: "ART",
     year: 2026,
@@ -167,7 +167,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "achievement-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/builder/400/300",
     title: "Builder program",
     category: "ACHIEVEMENTS",
     year: 2025,
@@ -176,7 +176,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "moment-2",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/launch/800/600",
     title: "Celebrating launch",
     category: "MOMENTS",
     year: 2025,
@@ -185,7 +185,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "personal-3",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/travel/400/300",
     title: "Travel capture",
     category: "PERSONAL",
     year: 2025,
@@ -195,7 +195,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "event-3",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/hackweek/400/300",
     title: "Hackathon weekend",
     category: "EVENTS",
     year: 2026,
@@ -204,7 +204,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "art-3",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/branding/600/400",
     title: "Branding exploration",
     category: "ART",
     year: 2025,
@@ -213,7 +213,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "founder-3",
     type: "image",
-    src: "/placeholder-image.png",
+    src: "https://picsum.photos/seed/product/400/300",
     title: "Product launch",
     category: "FOUNDER",
     year: 2025,
