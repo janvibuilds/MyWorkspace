@@ -6,21 +6,13 @@ import { ABOUT_ME } from "@/app/constants/data";
 const STAGGER = 30;
 
 const navItems = [
-  { name: "skills", href: "#skills" },
-  { name: "projects", href: "#projects" },
-  { name: "contact", href: "#contact" },
+  { name: "skills", href: "#skills", type: "hash" as const },
+  { name: "projects", href: "#projects", type: "hash" as const },
+  { name: "contact", href: "#contact", type: "hash" as const },
+  { name: "gallery", href: "/gallery", type: "route" as const },
 ];
 
 export default function Navbar() {
-  const handleScrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    e.preventDefault();
-    const element = document.getElementById(href.substring(1));
-    if (element) element.scrollIntoView({ behavior: "instant" });
-  };
-
   return (
     <nav className="py-2 px-4">
       <div className="flex items-center justify-between">
@@ -29,13 +21,8 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center justify-end flex-1 gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={(e) => handleScrollToSection(e, item.href)}
-              className="relative text-base text-foreground/80 cursor-pointer group"
-            >
+          {navItems.map((item) => {
+            const letterContent = (
               <span className="inline-flex">
                 {item.name.split("").map((letter, i) => (
                   <span
@@ -60,8 +47,34 @@ export default function Navbar() {
                   </span>
                 ))}
               </span>
-            </Link>
-          ))}
+            );
+
+            if (item.type === "hash") {
+              return (
+                <button
+                  key={item.name}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById(item.href.substring(1));
+                    if (element) element.scrollIntoView({ behavior: "instant" });
+                  }}
+                  className="relative text-base text-foreground/80 cursor-pointer group"
+                >
+                  {letterContent}
+                </button>
+              );
+            }
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="relative text-base text-foreground/80 cursor-pointer group"
+              >
+                {letterContent}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="ml-6">
