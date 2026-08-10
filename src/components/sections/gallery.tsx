@@ -38,7 +38,7 @@ export function Gallery() {
       {/* Grid */}
       <div className="p-4">
         {filteredItems.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 auto-rows-[180px]">
             {filteredItems.map((item, index) => (
               <GalleryItemCard
                 key={item.id}

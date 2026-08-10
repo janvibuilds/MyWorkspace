@@ -9,34 +9,28 @@ interface GalleryItemCardProps {
   onClick: () => void;
 }
 
-const aspectRatioClasses = {
-  landscape: "aspect-video",
-  portrait: "aspect-[3/4]",
-  square: "aspect-square",
-};
-
 export function GalleryItemCard({ item, onClick }: GalleryItemCardProps) {
-  const aspectClass = aspectRatioClasses[item.aspectRatio ?? "landscape"];
+  const sizeClasses: Record<string, string> = {
+    sm: "",
+    md: "",
+    lg: "sm:col-span-2",
+    wide: "sm:col-span-2",
+    tall: "sm:row-span-2",
+  };
 
   return (
     <button
       onClick={onClick}
-      className={`group relative w-full overflow-hidden rounded-[var(--radius)] border border-border bg-background transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.015] hover:border-border-hover focus-visible:ring-2 focus-visible:ring-[hsl(var(--link))] focus-visible:outline-none ${
-        item.featured ? "col-span-2" : ""
-      }`}
+      className={`group relative w-full overflow-hidden rounded-[var(--radius)] border border-border bg-background transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.015] hover:border-border-hover focus-visible:ring-2 focus-visible:ring-[hsl(var(--link))] focus-visible:outline-none ${sizeClasses[item.size ?? "sm"]}`}
       aria-label={`View: ${item.title ?? item.category}`}
     >
-      <div className={`relative ${aspectClass} overflow-hidden`}>
+      <div className="relative w-full h-full overflow-hidden min-h-[180px]">
         <Image
           src={item.src}
           alt={item.title ?? `${item.category} item`}
           fill
           className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-105"
-          sizes={
-            item.featured
-              ? "(max-width: 768px) 100vw, 768px"
-              : "(max-width: 768px) 100vw, 384px"
-          }
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 384px"
           loading="lazy"
         />
 
@@ -52,19 +46,6 @@ export function GalleryItemCard({ item, onClick }: GalleryItemCardProps) {
           </div>
         </div>
       </div>
-
-      {/* Metadata below media */}
-      {(item.title || item.year) && (
-        <div className="p-3">
-          {item.title && (
-            <p className="text-sm font-medium text-foreground">{item.title}</p>
-          )}
-          <p className="text-xs text-muted-foreground">
-            {item.category}
-            {item.year && <span> · {item.year}</span>}
-          </p>
-        </div>
-      )}
     </button>
   );
 }
