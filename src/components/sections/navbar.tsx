@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import ThemeToggle from "../ui/theme-toggle";
 import { ABOUT_ME } from "@/app/constants/data";
 
@@ -13,6 +14,10 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
     <nav className="py-2 px-4">
       <div className="flex items-center justify-between">
@@ -50,13 +55,18 @@ export default function Navbar() {
             );
 
             if (item.type === "hash") {
+              const sectionId = item.href.substring(1);
+
               return (
                 <button
                   key={item.name}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const element = document.getElementById(item.href.substring(1));
-                    if (element) element.scrollIntoView({ behavior: "instant" });
+                  onClick={() => {
+                    if (isHome) {
+                      const el = document.getElementById(sectionId);
+                      if (el) el.scrollIntoView({ behavior: "instant" });
+                    } else {
+                      router.push(`/${item.href}`);
+                    }
                   }}
                   className="relative text-base text-foreground/80 cursor-pointer group"
                 >
