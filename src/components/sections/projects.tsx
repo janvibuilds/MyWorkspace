@@ -11,10 +11,15 @@ import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
 interface ProjectsProps {
   title?: string;
+  limit?: string[];
 }
 
-export default function Projects({ title = "featured projects." }: ProjectsProps) {
+export default function Projects({ title = "featured projects.", limit }: ProjectsProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const displayProjects = limit
+    ? PROJECTS.filter((p) => limit.includes(p.name))
+    : PROJECTS;
 
   const handleProjectClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -35,7 +40,7 @@ export default function Projects({ title = "featured projects." }: ProjectsProps
       </div>
 
       <div className="relative divide-y divide-dashed divide-border">
-        {PROJECTS.map((project, index) => (
+        {displayProjects.map((project, index) => (
           <CollapsibleGrid
             key={project.name}
             isExpanded={activeIndex === index}
@@ -115,6 +120,17 @@ export default function Projects({ title = "featured projects." }: ProjectsProps
           </CollapsibleGrid>
         ))}
       </div>
+
+      {limit && (
+        <div className="p-4 border-b border-dashed border-border">
+          <Link
+            href="/projects"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            View All Projects →
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

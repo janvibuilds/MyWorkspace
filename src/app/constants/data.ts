@@ -120,7 +120,7 @@ export const EDUCATION = [
     institution: "Abdul Kalam Technical University",
     institutionLink: "https://aktu.ac.in/",
     period: "Nov 2022 - Jun 2026",
-    score: "Ghaziabad, Uttar Pradesh",
+    score: "8.5 CGPA",
   },
 ];
 

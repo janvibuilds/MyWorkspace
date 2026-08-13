@@ -21,7 +21,7 @@ export default function Home() {
     <AboutMe key="about" />,
     <Experience key="experience" />,
     <Education key="education" />,
-    <Projects key="projects" />,
+    <Projects key="projects" limit={["Orka", "VibeCode", "Predicare"]} />,
     <Skills key="skills" />,
     <Testimonials key="testimonials" />,
     <Contact key="contact" />,
